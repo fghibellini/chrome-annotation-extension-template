@@ -55,6 +55,7 @@ console.log("{{ your extension name }} loaded!")
 
 init({
   matchingFn: uuidMatchingFn,
-  resolveFn: uuidResolveFn
+  resolveFn: uuidResolveFn,
+  trigger: `ℹ️`,
 })
 

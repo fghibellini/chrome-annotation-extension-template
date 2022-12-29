@@ -14,7 +14,7 @@ import './framework.css';
 
 const defaultCheckIntervalMs = 200;
 
-export function init({ matchingFn, resolveFn, checkIntervalMs }) {
+export function init({ matchingFn, resolveFn, trigger, checkIntervalMs }) {
   setInterval(() => {
     const iterator = document.createNodeIterator(
       document.getRootNode(),
@@ -26,7 +26,7 @@ export function init({ matchingFn, resolveFn, checkIntervalMs }) {
       const parent = currentNode.parentElement
       if (!isDecorated(parent)) {
         const matchedValue = matchingFn(currentNode)[0];
-        const actionIcon = createActionIcon()
+        const actionIcon = createActionIcon(trigger)
         const loaderHtml = createLoaderDom()
         parent.appendChild(actionIcon);
         let triggered = false;
@@ -66,10 +66,10 @@ function isDecorated(element) {
   return Array.from(element.children).some(x => x.classList.contains(`arl-action-icon`))
 }
 
-function createActionIcon() {
+function createActionIcon(trigger) {
   const actionIcon = document.createElement("div")
   actionIcon.classList.add(`arl-action-icon`);
-  actionIcon.textContent = `ℹ️`;
+  actionIcon.textContent = trigger;
   return actionIcon;
 }
 
