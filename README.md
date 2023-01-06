@@ -6,7 +6,7 @@ Create your own [Chrome extension](https://developer.chrome.com/docs/extensions/
 Example use cases include:
 
 1. resolve [UUID values to entity information](https://fghibellini.com/posts/2022-12-17-Leveraging-UUIDs-to-the-Max/index.html) (either static data or query your own server)
-1. annotate [unix timestamps](https://en.wikipedia.org/wiki/Unix_time) and [UTC ISO8601](https://en.wikipedia.org/wiki/ISO_8601) time signatures with a more user-friendly local date
+1. annotate [unix timestamps](https://en.wikipedia.org/wiki/Unix_time) and [UTC ISO8601](https://en.wikipedia.org/wiki/ISO_8601) time signatures with a more user-friendly local date ([example extension](https://github.com/fghibellini/iso8601-chrome-extension))
 1. annotate currency values with conversions
 1. add explanations on top of cryptic notation that you came up with
 
